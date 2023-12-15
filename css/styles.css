@@ -1,30 +1,82 @@
+/* ELEMENTO RAÍZ QUE PUEDES USAR PARA GENERAR VARIABLES EN COLORES Y FUENTES  */
+:root {
+    --fondoDeColor: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    --LetraDeTextos: white;
+    --ColorCards: rgb(73, 61, 148);
+
+    /* Este es un código para generar colores y transparencias en RGB (RED GREEN BLUE ALPHA) */
+    /* --ColorCardsenRGBA: rgba(0, 0, 255, .1); */
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
 /* GLOBAL */
-/* CASCADA */
-body {
-    background-color: red;
+/* ESTE CÓDIGO ME AYUDA A RESETEAR LAS DIMENSIONES DE LOS ELEMENTOS EN HTML */
+html {
+    box-sizing: border-box;
 }
 
 body {
+    background: var(--fondoDeColor);
+    color: var(--LetraDeTextos);
+    font-family: 'Roboto', sans-serif;
+}
+
+.transparencias {
+    background-color: var(--ColorCardsenRGB);
+}
+
+/* BARRA NAVEGADORA */
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 20%;
+}
+
+nav ul {
+    display: flex;
+    /* flex-direction: row; */
+}
+
+nav ul li {
+    margin: 10px;
+    list-style-type: none;
+}
+
+.enlacesNav {
+    text-decoration: none;
+    color: black;
+}
+
+.enlacesNav:hover {
     background-color: blue;
-}
-
-p {
     color: white;
+    border-radius: 10px;
+    padding: 10px;
 }
 
-.texto2 {
-    background-color: red;
-}
+/* TERMINA BARRA NAVEGADORA */
 
-.texto {
-    color: white;
-}
+/* CASCADA */
 
 #wrapper {
-    background-color: brown;
-    padding: 30px;
-    margin: 50px;
-    border: solid;
+    width: 95%;
+    margin-left: 2.5%;
 }
 
 /* PORTAFOLIO */
+
+/* MEDIA QUERIES */
+@media (max-width: 360px) {
+    nav ul{
+        flex-direction: column;
+    }
+     
+}
