@@ -1,0 +1,30 @@
+/* GLOBAL */
+/* CASCADA */
+body {
+    background-color: red;
+}
+
+body {
+    background-color: blue;
+}
+
+p {
+    color: white;
+}
+
+.texto2 {
+    background-color: red;
+}
+
+.texto {
+    color: white;
+}
+
+#wrapper {
+    background-color: brown;
+    padding: 30px;
+    margin: 50px;
+    border: solid;
+}
+
+/* PORTAFOLIO */
