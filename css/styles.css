@@ -29,37 +29,46 @@ body {
 .transparencias {
     background-color: var(--ColorCardsenRGB);
 }
-
-/* BARRA NAVEGADORA */
-header {
+/* BARRA DE NAVEGACION */
+.BarraNav {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-}
-
-.logo {
-    width: 20%;
-}
-
-nav ul {
-    display: flex;
     /* flex-direction: row; */
 }
 
-nav ul li {
-    margin: 10px;
-    list-style-type: none;
+.BarraNav__logo img {
+    width: 30%;
 }
 
-.enlacesNav {
+.BarraNav__enlaces {
+    display: flex;
     text-decoration: none;
     color: black;
+    
+}
+.BarraNav__enlaces li{
+    list-style-type: none;
+    
+    
 }
 
-.enlacesNav:hover {
-    background-color: blue;
+
+.BarraNav__enlaces a {
+    text-decoration: none;
     color: white;
-    border-radius: 10px;
     padding: 10px;
+}
+
+.BarraNav__enlaces a:hover{
+    border-radius: 10px;
+    background-color: blue;
+}
+
+@media (max-width: 360px) {
+    .BarraNav__enlaces{
+       flex-direction: column;
+    }
 }
 
 /* TERMINA BARRA NAVEGADORA */
@@ -73,10 +82,44 @@ nav ul li {
 
 /* PORTAFOLIO */
 
-/* MEDIA QUERIES */
-@media (max-width: 360px) {
-    nav ul{
-        flex-direction: column;
-    }
-     
+
+/* FORMULARIO DE CONTACTO */
+.formulario{
+    display: grid;
+    grid-template-areas: "A B"
+                         "C C" 
+                         "D E"  ;
+
 }
+.formulario__form:nth-child(1){
+    grid-area: A;
+}
+.formulario__form:nth-child(2){
+    grid-area: B;
+}
+.formulario__form:nth-child(3){
+    grid-area: C;
+    display: flex;
+    justify-content: center;
+}
+
+.btn{
+   background-color: transparent;
+   color: white;
+   border-radius: 10px;
+   font-size: 30px;
+   box-shadow: none;
+   cursor: pointer;
+   grid-area: D; 
+}
+.btn:hover{
+    background-color: blue;
+    scale:calc(1.3);
+}
+.btn--verde{
+    background-color: green;
+    grid-area: E;
+}
+
+/* TERMINA FORMULARIO DE CONTACTO  */
+/* MEDIA QUERIES */
